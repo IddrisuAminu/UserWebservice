@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.send("Iddrisu Aminu api For all users");
 });
 
-app.get("users", (req, res) => {
+app.get("/users", (req, res) => {
   const user = req.body;
   users.push(user);
   res.status(201).json({
@@ -20,7 +20,7 @@ app.get("users", (req, res) => {
   });
 });
 
-app.post("users", (req, res) => {
+app.post("/user", (req, res) => {
   const { fname, lname, dob, school } = req.body;
   const user = { fname, lname, dob, school };
   users.push(user);
